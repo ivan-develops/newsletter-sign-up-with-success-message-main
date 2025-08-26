@@ -80,6 +80,13 @@ body {
         }
     }
 }
+.label-and-error {
+    display: flex;
+    justify-content: space-between;
+}
+.error-states {
+    color: red;
+}
 .email__label {
     font-size: 0.75rem;
     font-weight: 700;
