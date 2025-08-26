@@ -17,10 +17,11 @@
 
     <div class="grid">
       <!-- Sign-up  -->
-      <div class="img-container">
+      <picture class="img-container">
+        <source media="(min-width:850px)" srcset="assets/images/illustration-sign-up-desktop.svg">
         <img src="assets/images/illustration-sign-up-mobile.svg" alt="Graphics and desktop windows" class="image">
-      </div>
-      <form class="form">
+      </picture>
+      <form class="form" id="form">
         <div class="info-content">
           <h1 class="title">Stay updated!</h1>
           <p class="paragraph">Join 60,000+ product managers receiving monthly updates on:</p>
@@ -30,31 +31,23 @@
             <li class="list__item">And much more!</li>
           </ul>
           <label class="email__label" for="email__input">Email address</label>
-          <input class="email__input" type="email" name="####" id="email__input" placeholder="email@company.com">
+          <input class="email__input" type="email" id="email__input" placeholder="email@company.com">
         </div>
       
-        <input type="submit" class="submit" value="Subscribe to monthly newsletter">
+        <input type="submit" class="button" id="submit" value="Subscribe to monthly newsletter">
       </form>
-      <!-- Success message start -->
-      <div class="modal">
-        <img src="assets/images/icon-success.svg" alt="checked icon" class="modal__icon">
-        <h2 class="modal__title">Thanks for subscribing!</h2>
-        <p class="modal__description">A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
-        <button class="modal__button">Dismiss message</button>
-      </div>
     </div> <!-- grid -->
-    
+    <!-- Success message start -->
+    <div class="modal">
+      <div class="modal-container">
+        <div class="modal__info">
+          <img class="modal__icon" src="assets/images/icon-success.svg" alt="checked icon">
+          <h2 class="modal__title title">Thanks for subscribing!</h2>
+          <p class="modal__description paragraph">A confirmation email has been sent to <span class="bold">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+        </div>
+        <button class="modal__button button">Dismiss message</button>
+      </div>
+    </div>
   </main>
-
-  
-
-
-  
-  
-
-  
-
-  
-
 </body>
 </html>
