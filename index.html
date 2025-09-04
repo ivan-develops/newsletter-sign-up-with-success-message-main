@@ -21,7 +21,7 @@
         <source media="(min-width:850px)" srcset="assets/images/illustration-sign-up-desktop.svg">
         <img src="assets/images/illustration-sign-up-mobile.svg" alt="Graphics and desktop windows" class="image">
       </picture>
-      <form class="form" id="form">
+      <form class="form" id="form" novalidate>
         <div class="info-content">
           <h1 class="title">Stay updated!</h1>
           <p class="paragraph">Join 60,000+ product managers receiving monthly updates on:</p>
@@ -30,14 +30,14 @@
             <li class="list__item">Measuring to ensure updates are a success</li>
             <li class="list__item">And much more!</li>
           </ul>
-          <div class="label-and-error">
+          <div class="label-and-states">
             <label class="email__label" for="email__input">Email address</label>
-            <p class="error-states email__label">Valide email required</p>
+            <p class="email__label" id="email__states"></p>
           </div>
           <input class="email__input" type="email" id="email__input" placeholder="email@company.com">
         </div>
       
-        <input type="submit" class="button" id="submit" value="Subscribe to monthly newsletter">
+        <input type="submit" class="button" id="submit" value="Subscribe to monthly newsletter" required>
       </form>
     </div> <!-- grid -->
     <!-- Success message start -->
@@ -46,9 +46,9 @@
         <div class="modal__info">
           <img class="modal__icon" src="assets/images/icon-success.svg" alt="checked icon">
           <h2 class="modal__title title">Thanks for subscribing!</h2>
-          <p class="modal__description paragraph">A confirmation email has been sent to <span class="bold">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+          <p class="modal__description paragraph">A confirmation email has been sent to <span class="bold modal__email">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
         </div>
-        <button class="modal__button button">Dismiss message</button>
+        <button class="modal__button button" id="modal-closer">Dismiss message</button>
       </div>
     </div>
   </main>

@@ -18,7 +18,9 @@
 :root {
     --Red: hsl(4, 100%, 67%);
     --Red-secundary: hsl(340, 87%, 62%);
-    --Red-transparency: hsla(4, 100%, 67%, 0.521);
+    --Red-transparency: hsla(4, 100%, 67%, 0.2);
+    --Green: hsl(120, 100%, 25%);
+    --Green-transparency: hsla(120, 100%, 25%, 0.17);
     --Blue-800: hsl(234, 29%, 20%);
     --Blue-700: hsl(235, 18%, 26%);
     --Grey: hsl(0, 0%,58%);
@@ -80,12 +82,15 @@ body {
         }
     }
 }
-.label-and-error {
+.label-and-states {
     display: flex;
     justify-content: space-between;
 }
-.error-states {
-    color: red;
+.email__error-states {
+    color: var(--Red);
+}
+.email__succes-states {
+    color: var(--Green);
 }
 .email__label {
     font-size: 0.75rem;
@@ -98,14 +103,29 @@ body {
     border: 1px solid var(--Grey);
     font-size: 0.99rem;
     margin-top: -0.5rem;
+    font-family: inherit;  /*heredar font-family*/
 
     &::placeholder {
         color: var(--Grey);
     }
 
     &:focus {
-        border: 1px solid var(--Blue-700)
+        border: 1px solid var(--Blue-700);
+        background: var(--White);        
     }
+
+    &.invalid {
+        border: 1px solid var(--Red);
+        background: var(--Red-transparency);
+        color: var(--Red);
+    }
+
+    &.valid {
+        border: 1px solid var(--Green);
+        background: var(--Green-transparency);
+        color: var(--Green);
+    }
+
 }
 .button {
     width: 100%;
