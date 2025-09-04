@@ -41,7 +41,6 @@ const showSuccess = (emailVerified , message)=> {
 
 const hideModal = ()=> {
     modal.classList.toggle('active');
-    console.log('EJECUTADO! hideModal ');
 }
 // const modal__button = document.querySelector('.button__modal button');
 const modal__button = document.getElementById('modal-closer');
